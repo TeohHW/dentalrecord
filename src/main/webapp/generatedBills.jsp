@@ -99,8 +99,7 @@ body {
 					int customerid = 1;
 					Class.forName("com.mysql.cj.jdbc.Driver");
 					Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/dentalrecord?allowPublicKeyRetrieval=true&useSSL=false", "root",
-					"passwordroot");
+					"jdbc:mysql://be411b9b7c9b30:cf5f4f3e@us-cdbr-east-06.cleardb.net/heroku_b9c43cd0bc4ec95?reconnect=true");
 					stat = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
 					String query = request.getParameter("search");
 					String data;
