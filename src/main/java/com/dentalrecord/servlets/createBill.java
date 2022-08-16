@@ -101,7 +101,7 @@ public class createBill extends HttpServlet {
 			
 			clinicId = Integer.valueOf(session.getAttribute("clinicId").toString());
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dentalrecord?useSSL=false","root","passwordroot");
+			conn = DriverManager.getConnection("jdbc:mysql://be411b9b7c9b30:cf5f4f3e@us-cdbr-east-06.cleardb.net/heroku_b9c43cd0bc4ec95?reconnect=true");
 			stat = conn.createStatement();
 			for(int i = 0; i<checkedServices.length;i++) {
 				data = "SELECT serviceName,serviceCost FROM dentalServices WHERE iddentalServices="+checkedServices[i];
