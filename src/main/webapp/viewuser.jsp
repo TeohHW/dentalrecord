@@ -97,7 +97,7 @@ div.wrap-contact100{
 	String id = request.getParameter("id");
 	try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dentalrecord?useSSL=false", "root", "passwordroot");
+		con = DriverManager.getConnection("jdbc:mysql://be411b9b7c9b30:cf5f4f3e@us-cdbr-east-06.cleardb.net/heroku_b9c43cd0bc4ec95?reconnect=true");
 		stmt = con.createStatement();
 		String sql = "select * from users where iduserAccounts=" + id;
 		rs = stmt.executeQuery(sql);
