@@ -54,7 +54,7 @@ public class MaterialUsed extends HttpServlet {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dentalrecord?useSSL=false","root","passwordroot");
+			conn = DriverManager.getConnection("jdbc:mysql://be411b9b7c9b30:cf5f4f3e@us-cdbr-east-06.cleardb.net/heroku_b9c43cd0bc4ec95?reconnect=true");
 			PreparedStatement pst = conn.prepareStatement("insert into materialsused values (?,?,?)");
 			
 			stmt = conn.createStatement();
