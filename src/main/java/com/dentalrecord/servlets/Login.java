@@ -48,7 +48,7 @@ public class Login extends HttpServlet {
 		RequestDispatcher dispatcher=null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dentalrecord?useSSL=false","root","passwordroot");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://be411b9b7c9b30:cf5f4f3e@us-cdbr-east-06.cleardb.net/heroku_b9c43cd0bc4ec95?reconnect=true");
 			PreparedStatement pst = conn.prepareStatement("SELECT * from users where useremail = ? and password =?",ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
 			pst.setString(1, uemail);
 			pst.setString(2, upwd);
